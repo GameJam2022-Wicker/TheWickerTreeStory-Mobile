@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerAction : MonoBehaviour
 {
+    public Button jumpButton;
     public Vector3 verticalMove, horizontalMove;
 
     public float gravityScale;
@@ -55,7 +57,9 @@ public class PlayerAction : MonoBehaviour
 
     void Start()
     {
+        jumpButton = GameObject.Find("JumpButton").GetComponent<Button>();
         colliderSizeX = capsuleCollider2D.size.x;   // 기존 콜라이더 사이즈 저장
+        jumpButton.onClick.AddListener(OnTouchJumpButton);
     }
 
 
@@ -106,27 +110,7 @@ public class PlayerAction : MonoBehaviour
             }
         }
 
-        // Jump
-        // J : 사다리 타는 중 or 올빼미 스킬 사용 중에는 점프 불가능
-        // yesman: 코요테타임 적용
-        if (Input.GetButtonDown("Jump") && !isClimbing && skillManager != null && !skillManager.isOwlSkilling)
-        {
-            if (coyoteTimeCounter > 0f)
-            {
-                isJumping = true;
-                animator.SetBool("isJumping", true);
-                rigid.velocity = Vector2.up * jumpPower;
-
-                // 소리 재생
-                jumpSound.Play();
-            }
-
-        }
-
-        if (Input.GetButtonUp("Jump") && rigid.velocity.y > 0f)
-        {
-            coyoteTimeCounter = 0f;
-        }
+        
 
         //Stop Speed
         if (Input.GetButtonUp("Horizontal"))
@@ -160,6 +144,35 @@ public class PlayerAction : MonoBehaviour
                 Flip();
             else if (horizontalMove == Vector3.left && facingRight)
                 Flip();
+        }
+    }
+
+    public void OnTouchJumpButton()
+    {
+        // Jump
+        // J : 사다리 타는 중 or 올빼미 스킬 사용 중에는 점프 불가능
+        // yesman: 코요테타임 적용
+        if(skillManager.maskManager.currentMask == MaskManager.Mask.Owl && !IsGrounded())
+        {
+            skillManager.StartOwlSkill();
+        }
+        if (!isClimbing && skillManager != null && !skillManager.isOwlSkilling)
+        {
+            if (coyoteTimeCounter > 0f)
+            {
+                isJumping = true;
+                animator.SetBool("isJumping", true);
+                rigid.velocity = Vector2.up * jumpPower;
+
+                // 소리 재생
+                jumpSound.Play();
+            }
+
+        }
+
+        if (rigid.velocity.y > 0f)
+        {
+            coyoteTimeCounter = 0f;
         }
     }
 

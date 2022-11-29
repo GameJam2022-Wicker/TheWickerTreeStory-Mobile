@@ -30,7 +30,7 @@ public class Obstacle : MonoBehaviour
         RaycastHit2D raycastHit2DDrop = Physics2D.Raycast(boxCollider.bounds.center, Vector2.down, boxCollider.bounds.extents.y, tileLayerMask);
 
         
-        if (Input.GetKey(KeyCode.F) && raycastHit2D.collider == null)
+        if (raycastHit2D.collider == null)
             canPush = true;
         else
             canPush = false;

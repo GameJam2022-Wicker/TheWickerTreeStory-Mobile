@@ -4251,7 +4251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a0034657a5e2841aeb3a46c4b13856, type: 3}
   m_Name: SubtitleClip(Clone)
   m_EditorClassIdentifier: 
-  subtitleText: "F\uB97C \uB204\uB974\uBA74 \uBC14\uC704\uB97C \uBC00 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  subtitleText: "\uB3FC\uC9C0\uAC00\uBA74\uC744 \uC4F4 \uCC44\uB85C \uBC14\uC704\uB97C
+    \uBC00 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
 --- !u!114 &7600081684353796170
 MonoBehaviour:
   m_ObjectHideFlags: 1

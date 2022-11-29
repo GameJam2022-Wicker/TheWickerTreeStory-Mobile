@@ -21,31 +21,24 @@ public class MaskManager : MonoBehaviour
     [SerializeField] private int maskNum;           // 가면 개수
     private Animator animator;
     
+    public Button maskButton;
 
     private void Awake()
     {
+        maskButton = GameObject.Find("MaskButton").GetComponent<Button>();
         animator=GameObject.Find("Player").GetComponent<Animator>();
+
+        maskButton.onClick.AddListener(OnTouchMaskButton);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTouchMaskButton()
     {
         if (canChangeMask & CanChangeMask())
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                currentMask--;
-                if (currentMask < 0)
-                    currentMask = (Mask)(maskNum - 1);
-                ChangeMask();
-            }
-            else if (Input.GetKeyUp(KeyCode.E))
-            {
-                currentMask++;
-                if (currentMask == (Mask)maskNum)
-                    currentMask = 0;
-                ChangeMask();
-            }
+            currentMask++;
+            if (currentMask == (Mask)maskNum)
+                currentMask = 0;
+            ChangeMask();
         }
     }
 

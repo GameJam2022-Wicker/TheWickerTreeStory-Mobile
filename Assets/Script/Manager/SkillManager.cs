@@ -64,23 +64,13 @@ public class SkillManager : MonoBehaviour
                 }
                 break;
             case MaskManager.Mask.Owl:
-                if (Input.GetKeyDown(KeyCode.F))
+                if (isOwlSkilling)
                 {
-                    if (owlSkillCoolTime == 0)  // J : 쿨타임 지났으면 스킬 시작
-                        StartOwlSkill();
+                    if (owlSkillTime > 0)
+                        owlSkillTime -= Time.deltaTime;
+                    else     // J : 스킬 시간 끝났으면 강제 종료
+                        FinishOwlSkill();
                 }
-                else if (Input.GetKey(KeyCode.F))
-                {
-                    if (isOwlSkilling)
-                    {
-                        if (owlSkillTime > 0)
-                            owlSkillTime -= Time.deltaTime;
-                        else     // J : 스킬 시간 끝났으면 강제 종료
-                            FinishOwlSkill();
-                    }
-                }
-                else if (Input.GetKeyUp(KeyCode.F)) // J : 스킬 종료
-                    FinishOwlSkill();
                 break;
             case MaskManager.Mask.Pig:
                 //obstacle에 구현
@@ -132,11 +122,14 @@ public class SkillManager : MonoBehaviour
     }
 
     // J : 올빼미 스킬 시작
-    private void StartOwlSkill()
+    public void StartOwlSkill()
     {
-        isOwlSkilling = true;
-        animator.SetBool("isFlying", isOwlSkilling);
-        rigid.gravityScale = 0;
+        if (owlSkillCoolTime == 0)  // J : 쿨타임 지났으면 스킬 시작
+        {
+            isOwlSkilling = true;
+            animator.SetBool("isFlying", isOwlSkilling);
+            rigid.gravityScale = 0;
+        }
     }
 
     // J : 올빼미 스킬 종료
