@@ -20,15 +20,10 @@ public class MaskManager : MonoBehaviour
     [SerializeField] private List<AudioSource> maskChangeAudioList;
     [SerializeField] private int maskNum;           // 가면 개수
     private Animator animator;
-    
-    public Button maskButton;
 
     private void Awake()
     {
-        maskButton = GameObject.Find("MaskButton").GetComponent<Button>();
         animator=GameObject.Find("Player").GetComponent<Animator>();
-
-        maskButton.onClick.AddListener(OnTouchMaskButton);
     }
 
     public void OnTouchMaskButton()

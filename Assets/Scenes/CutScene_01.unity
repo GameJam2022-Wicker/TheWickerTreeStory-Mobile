@@ -1225,7 +1225,6 @@ MonoBehaviour:
   - {fileID: 562743333}
   - {fileID: 562743332}
   maskNum: 2
-  maskButton: {fileID: 0}
 --- !u!114 &562743335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,7 +1244,6 @@ MonoBehaviour:
   signTextPro: {fileID: 0}
   isOwlSkilling: 0
   isPigSkilling: 0
-  canUseOwlSkill: 0
   player: {fileID: 2091926156}
   maskManager: {fileID: 562743334}
 --- !u!4 &562743336
@@ -1359,7 +1357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957535779893812175, guid: 27e7fd4098d4490439c03d9b7db9ac81, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7957535779893812175, guid: 27e7fd4098d4490439c03d9b7db9ac81, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1839,7 +1837,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1758319659}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2416,7 +2414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1550055006114602756, guid: a67c4a0f674c7fe488f38730f743ed78, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1550055006114602756, guid: a67c4a0f674c7fe488f38730f743ed78, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3753,12 +3751,12 @@ RectTransform:
   m_Children:
   - {fileID: 1440996059}
   - {fileID: 1255524130}
+  - {fileID: 461002507}
+  - {fileID: 1940694178}
   - {fileID: 586811336}
   - {fileID: 853200989}
   - {fileID: 1398989863}
   - {fileID: 1065552735}
-  - {fileID: 461002507}
-  - {fileID: 1940694178}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5901,7 +5899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1954894258146835238, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1954894258146835238, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5979,6 +5977,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6370013261629488617, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091926156}
+    - target: {fileID: 6370013261629488617, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnTouchJumpButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
 --- !u!1001 &2715369641202113921
@@ -5998,7 +6004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2715369639878703526, guid: 017b1173443b07c45b30e9a17ed027eb, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2715369639878703526, guid: 017b1173443b07c45b30e9a17ed027eb, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6099,7 +6105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5690313815038015772, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5690313815038015772, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6176,6 +6182,14 @@ PrefabInstance:
     - target: {fileID: 5690313815038015775, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
       propertyPath: m_Name
       value: MaskButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970669534604643285, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 562743334}
+    - target: {fileID: 8970669534604643285, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnTouchMaskButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerAction : MonoBehaviour
 {
-    public Button jumpButton;
     public Vector3 verticalMove, horizontalMove;
 
     public float gravityScale;
@@ -36,7 +35,8 @@ public class PlayerAction : MonoBehaviour
     private Animator animator;
     private LayerMask ladderLayer, tileLayer, playerLayer, portalLayer, obstacleLayer, gameOverLayer;
 
-    [SerializeField] private AudioSource walkSound, jumpSound, flySound, ladderSound, portalSound;
+    [SerializeField] private AudioSource jumpSound, flySound, ladderSound, portalSound;
+    public AudioSource walkSound;
 
     void Awake()
     {
@@ -57,9 +57,7 @@ public class PlayerAction : MonoBehaviour
 
     void Start()
     {
-        jumpButton = GameObject.Find("JumpButton").GetComponent<Button>();
         colliderSizeX = capsuleCollider2D.size.x;   // 기존 콜라이더 사이즈 저장
-        jumpButton.onClick.AddListener(OnTouchJumpButton);
     }
 
 

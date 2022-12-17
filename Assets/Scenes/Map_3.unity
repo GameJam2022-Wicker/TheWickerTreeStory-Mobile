@@ -350,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1954894258146835238, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1954894258146835238, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -427,6 +427,14 @@ PrefabInstance:
     - target: {fileID: 1954894258146835239, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
       propertyPath: m_Name
       value: JumpButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370013261629488617, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 305639398}
+    - target: {fileID: 6370013261629488617, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnTouchJumpButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
@@ -516,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5690313815038015772, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5690313815038015772, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -593,6 +601,14 @@ PrefabInstance:
     - target: {fileID: 5690313815038015775, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
       propertyPath: m_Name
       value: MaskButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970669534604643285, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1564260114}
+    - target: {fileID: 8970669534604643285, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnTouchMaskButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4485414d93bae542ba694b1c89cd1c5, type: 3}
@@ -4729,7 +4745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046365570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.320417, y: 1.0684, z: -10}
+  m_LocalPosition: {x: 4.7227907, y: 1.07038, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5346,7 +5362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2715369639878703526, guid: 017b1173443b07c45b30e9a17ed027eb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2715369639878703526, guid: 017b1173443b07c45b30e9a17ed027eb, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5687,7 +5703,6 @@ MonoBehaviour:
   - {fileID: 1564260113}
   - {fileID: 1564260112}
   maskNum: 2
-  maskButton: {fileID: 0}
 --- !u!114 &1564260115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5707,7 +5722,6 @@ MonoBehaviour:
   signTextPro: {fileID: 0}
   isOwlSkilling: 0
   isPigSkilling: 0
-  canUseOwlSkill: 0
   player: {fileID: 305639398}
   maskManager: {fileID: 1564260114}
 --- !u!4 &1564260116
@@ -6151,9 +6165,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 683838020}
-  - {fileID: 1500406915}
   - {fileID: 245536236}
   - {fileID: 41732022}
+  - {fileID: 1500406915}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6290,7 +6304,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771883, y: 1}
+    m_SensorSize: {x: 2.1111112, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
