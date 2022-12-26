@@ -26,6 +26,7 @@ public class SkillManager : MonoBehaviour
     public GameObject signUI;
     public TextMeshProUGUI signTextPro;
     public Button checkButton;
+    public Button panel;
 
     public bool isOwlSkilling, isPigSkilling = false;   // J : 능력 사용 중 여부
     private float owlSkillTime = 0.5f;  // J : 남은 올빼미 스킬 타임
@@ -47,6 +48,7 @@ public class SkillManager : MonoBehaviour
         animator = player.GetComponent<Animator>();
 
         checkButton.onClick.AddListener(OnTouchCheckButton);
+        panel.onClick.AddListener(OnTouchSignUIPanel);
     }
 
     private void Update()
@@ -89,16 +91,15 @@ public class SkillManager : MonoBehaviour
         {
             if (signUI != null)  // J : 표지판이 있는 맵에서 F키 누름
             {
-                if (signUI.activeSelf == true)  // J : 이미 표지판을 보고 있는 경우
-                {
-                    // J : 표지판 닫음
-                    signUI.SetActive(false);
-                    Time.timeScale = 1;
-                }
-                else
-                    UseSkillNoneMask();
+                UseSkillNoneMask();
             }
         }
+    }
+
+    public void OnTouchSignUIPanel()
+    {
+        Time.timeScale = 1f;
+        signUI.SetActive(false);
     }
 
     // J : 부엉이 스킬 쿨타임 업데이트
@@ -114,6 +115,7 @@ public class SkillManager : MonoBehaviour
     //yesman: 가면을 쓰지 않았을 때 표지판 체크 가능
     void UseSkillNoneMask()
     {
+        Time.timeScale = 0f;
         RaycastHit2D raycastHit2D = Physics2D.Raycast(capsuleCollider2D.bounds.center, Vector2.right, 5f, signLayerMask);
         RaycastHit2D raycastLeftHit2D = Physics2D.Raycast(capsuleCollider2D.bounds.center, Vector2.left, 5f, signLayerMask);
         Color rayColor;

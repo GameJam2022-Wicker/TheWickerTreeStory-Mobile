@@ -2220,6 +2220,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5677131207605939863, guid: a7279d62afa61354896ee3fc8dce6f76, type: 3}
   m_PrefabInstance: {fileID: 368000733}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &368000736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6074685749008738026, guid: a7279d62afa61354896ee3fc8dce6f76, type: 3}
+  m_PrefabInstance: {fileID: 368000733}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &380403630
 GameObject:
   m_ObjectHideFlags: 0
@@ -14434,6 +14445,7 @@ MonoBehaviour:
   signUI: {fileID: 368000735}
   signTextPro: {fileID: 699901733}
   checkButton: {fileID: 1096849554}
+  panel: {fileID: 368000736}
   isOwlSkilling: 0
   isPigSkilling: 0
   player: {fileID: 459091841}
