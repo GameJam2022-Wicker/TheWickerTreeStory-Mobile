@@ -350,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1954894258146835238, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1954894258146835238, guid: 5944a956378dec547845b4316ceac6b2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5362,7 +5362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2715369639878703526, guid: 017b1173443b07c45b30e9a17ed027eb, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2715369639878703526, guid: 017b1173443b07c45b30e9a17ed027eb, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5720,6 +5720,7 @@ MonoBehaviour:
     m_Bits: 512
   signUI: {fileID: 0}
   signTextPro: {fileID: 0}
+  checkButton: {fileID: 0}
   isOwlSkilling: 0
   isPigSkilling: 0
   player: {fileID: 305639398}

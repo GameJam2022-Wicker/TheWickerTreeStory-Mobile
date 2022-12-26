@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 
 public class CutsceneTriggerStay : MonoBehaviour
 {
     private bool isPlayerStay;
     public PlayableDirector timeline_cutscene;
+    public Button checkButton;
+    
+    bool checkButtonclick = false;
 
     private void Update()
     {
         if(isPlayerStay)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (checkButtonclick)
             {
+                checkButtonclick = false;
                 timeline_cutscene.Play();
-                Debug.Log("f버튼 누름");
             }
         }
     }
@@ -27,5 +31,10 @@ public class CutsceneTriggerStay : MonoBehaviour
             isPlayerStay = true;
             
         }
+    }
+
+    public void onClickCheckButton()
+    {
+        checkButtonclick = true;
     }
 }
