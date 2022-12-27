@@ -154,7 +154,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 2
-  AndroidMinSdkVersion: 30
+  AndroidMinSdkVersion: 31
   AndroidTargetSdkVersion: 31
   AndroidPreferredInstallLocation: 1
   aotOptions: 
